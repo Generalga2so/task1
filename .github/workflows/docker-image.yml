@@ -1,0 +1,26 @@
+name: Build and push Docker image
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  push:
+    env:
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: docker/login-action@v1
+        with:
+          username: aoa7clothings
+          password: dckr_pat_nj9Lh8iZf6uSAaI5vrFNl9Hfoc0
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: aoa7clothings/task1:latest
