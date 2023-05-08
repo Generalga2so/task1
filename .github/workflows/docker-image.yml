@@ -7,9 +7,15 @@ on:
 
 jobs:
   push:
+<<<<<<< HEAD
     env:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+=======
+  env:
+    DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+    DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+>>>>>>> 77698b1d3f664a767bd2d0334a32c8c2ca2163af
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,3 +30,7 @@ jobs:
           context: .
           push: true
           tags: aoa7clothings/task1:latest
+<<<<<<< HEAD
+=======
+
+>>>>>>> 77698b1d3f664a767bd2d0334a32c8c2ca2163af
