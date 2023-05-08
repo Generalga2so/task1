@@ -21,4 +21,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: aoacloyhings7/task1:latest
+          tags: aoa7clothings/task1:latest
